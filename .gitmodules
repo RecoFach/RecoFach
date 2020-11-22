@@ -1,0 +1,9 @@
+[submodule "frontend"]
+	path = frontend
+	url = https://github.com/RecoFach/frontend.git
+[submodule "recommendation-service"]
+	path = recommendation-service
+	url = https://github.com/RecoFach/recommendation-service.git
+[submodule "core-service"]
+	path = core-service
+	url = https://github.com/RecoFach/core-service.git
