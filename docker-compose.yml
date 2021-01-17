@@ -1,0 +1,26 @@
+version: "3.7"
+
+services:
+  core:
+    container_name: "recofach-core"
+    build: ./core-service
+    ports:
+      - 8080:8080
+    expose:
+      - 8080
+    environment:
+      - "SPRING_DATA_MONGODB_URI=<url for database>"
+
+  app:
+    container_name: "recofach-frontend"
+    build:
+      context: ./frontend
+      args:
+        - "api_url=http://localhost"
+        - "api_port=8080"
+    ports:
+      - 3000:3000
+    expose:
+      - 3000
+    depends_on:
+      - core
