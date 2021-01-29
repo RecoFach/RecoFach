@@ -44,3 +44,15 @@ services:
       - 3000
     depends_on:
       - core
+
+
+  recommendation:
+    container_name: "recommendation-service"
+    build:
+      context: ./recommendation-service
+    ports:
+      - 2000:2000
+    expose:
+      - 2000
+    depends_on:
+      - core
