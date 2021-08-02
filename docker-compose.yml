@@ -55,3 +55,16 @@ services:
       - 2000:2000
     expose:
       - 2000
+    depends_on:
+      - maria
+
+  maria:
+    build: ./maria
+    # container_name: "maria"
+    ports:
+      - 3306:3306
+  
+  db_initialiser:
+    build: ./db_initialiser
+    depends_on:
+      - maria

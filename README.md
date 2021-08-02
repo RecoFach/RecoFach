@@ -39,3 +39,7 @@ perform following steps:
 
     ```git submodule update --init --recursive```
 
+1. Build project
+    ```docker-compose up --build```
+
+1. [Enjoy](http://localhost:3000) 
